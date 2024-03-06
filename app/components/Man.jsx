@@ -16,7 +16,7 @@ export function Man(props) {
             <mesh
                 rotation-x={angleToRadians(-25)}
                 position-y={1}
-                position-z={4}
+                position-z={0}
                 position-x={4}
                 castShadow={true}>
                 <primitive object={model.scene} {...props} />

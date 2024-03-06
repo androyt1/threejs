@@ -1,4 +1,5 @@
 "use client";
+import { Html } from "@react-three/drei";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 const Man = dynamic(() => import("@/components/Man").then((mod) => mod.Man), {
@@ -19,8 +20,8 @@ const page = () => {
             </div>
             <div className='w-full h-[50vh] md:h-screen flex justify-center items-center'>
                 <div className='w-full h-[50vh]  md:h-screen flex justify-start items-center p-3'>
-                    <Suspense fallback={null}>
-                        <Man />
+                    <Suspense fallback={<Html>Loading Model, please wait</Html>}>
+                        <Man scale={1.2} />
                     </Suspense>
                 </div>
             </div>
