@@ -3,13 +3,14 @@ import { useGLTF, OrbitControls, PerspectiveCamera, Environment } from "@react-t
 import { Canvas } from "@react-three/fiber";
 import { angleToRadians } from "../utils/angle";
 
-const Man = () => {
-    const model = useGLTF("/models/man_head.glb");
+export function Man(props) {
+    const fileUrl = "/models/head.glb";
+    const model = useGLTF(fileUrl);
     return (
         <Canvas>
             <PerspectiveCamera makeDefault position={[0, 20, 30]} />
-            <OrbitControls />
-            <directionalLight args={["#ffffff", 2.5]} position={[-3, 3, 0]} />
+            <OrbitControls autoRotate={true} rotateSpeed={1} />
+            <directionalLight args={["#ffffff", 2.5]} position={[0, 3, 0]} />
             {/* <ambientLight args={["#ffffff", 0.5]} /> */}
 
             <mesh
@@ -18,7 +19,7 @@ const Man = () => {
                 position-z={4}
                 position-x={4}
                 castShadow={true}>
-                <primitive object={model.scene} />
+                <primitive object={model.scene} {...props} />
             </mesh>
             <mesh rotation-x={-angleToRadians(90)} position-y={-8}>
                 <planeGeometry args={[30, 20]} />
@@ -27,6 +28,4 @@ const Man = () => {
             {/* <Environment preset='night' background blur={0.5} /> */}
         </Canvas>
     );
-};
-
-export default Man;
+}
