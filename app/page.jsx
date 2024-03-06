@@ -7,9 +7,9 @@ const Man = dynamic(() => import("@/components/Man").then((mod) => mod.Man), {
 });
 const page = () => {
     return (
-        <div className='w-full h-screen grid grid-cols-1 md:grid-cols-2 bg-gradient-to-b from-[#fff] to-[#6C5252]'>
+        <div className='w-full h-screen grid grid-cols-1 md:grid-cols-2 bg-gradient-to-b from-[#fff] to-[#6C5252] md:px-20'>
             <div className='h-[50vh] md:h-screen flex flex-col justify-center items-center'>
-                <h1 className='text-4xl md:text-6xl text-black font-bold'>Hello 👋 </h1>
+                {/* <h1 className='text-4xl md:text-6xl text-black font-bold'>Hello 👋 </h1> */}
                 <h3 className='text-4xl text-wrap md:text-8xl font-bold mt-4 text-center tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-[#552A1C] to-[#000]'>
                     Aghoghovwia Andrew
                 </h3>
