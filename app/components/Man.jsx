@@ -4,7 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { angleToRadians } from "../utils/angle";
 
 const Man = () => {
-    const model = useGLTF("./models/man_head.glb");
+    const model = useGLTF("/models/man_head.glb");
     return (
         <Canvas>
             <PerspectiveCamera makeDefault position={[0, 20, 30]} />
