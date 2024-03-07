@@ -6,6 +6,7 @@ import {
     Environment,
     Stars,
     Sparkles,
+    Cloud,
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { angleToRadians } from "../utils/angle";
