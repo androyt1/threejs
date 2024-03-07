@@ -10,7 +10,7 @@ const page = () => {
     return (
         <div>
             <Navbar />
-            <div className='w-full h-screen md:min-h-[calc(100vh-64px)] grid grid-cols-1 md:grid-cols-2 bg-black'>
+            <div className='w-full h-screen md:min-h-[calc(100vh-64px)] grid grid-cols-1 md:grid-cols-2 bg-black p-3 md:px-20'>
                 <div className='h-[50vh] md:h-screen flex flex-col justify-center items-center md:items-start'>
                     {/* <h1 className='text-4xl md:text-6xl text-black font-bold'>Hello 👋 </h1> */}
                     <h3 className='text-4xl text-wrap md:text-8xl font-bold mt-4 text-center md:text-left tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-tea uppercase'>
