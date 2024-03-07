@@ -1,5 +1,12 @@
 "use client";
-import { useGLTF, OrbitControls, PerspectiveCamera, Environment } from "@react-three/drei";
+import {
+    useGLTF,
+    OrbitControls,
+    PerspectiveCamera,
+    Environment,
+    Stars,
+    Sparkles,
+} from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { angleToRadians } from "../utils/angle";
 
@@ -26,6 +33,15 @@ export function Man(props) {
                 <meshStandardMaterial color='#6C463A' />
             </mesh>
             {/* <Environment preset='night' background blur={0.5} /> */}
+            <Stars radius={800} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
+            <Sparkles
+                count={50}
+                speed={3}
+                opacity={1}
+                scale={[30, 30, 30]}
+                size={20}
+                color='#ffffff'
+            />
         </Canvas>
     );
 }
