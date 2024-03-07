@@ -2,9 +2,9 @@ import React from "react";
 
 const Navbar = () => {
     return (
-        <header className='w-full p-3 md:px-20 h-16 flex justify-between items-center bg-tea'>
+        <header className='w-full p-3 md:px-20 h-16 flex justify-between items-center bg-black'>
             <div>
-                <h3 className='text-3xl font-semibold text-white'>Androy</h3>
+                <h3 className='text-3xl font-semibold text-white'>Mag</h3>
             </div>
             <nav>
                 <ul className='flex gap-3 items-center'>
